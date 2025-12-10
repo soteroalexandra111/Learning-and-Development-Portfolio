@@ -1,0 +1,1265 @@
+<html lang="en"><head><script>(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6IjExYjc0YTUyNzgwMDk5ZjEzNDY0MmNlZWM3ZGE4MjNkMTc4MDc2ZjIiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxNjM4MjI5NzIzMDA2MzAwNDM0MSIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzI4NjI0ODFmMjM3YzI1MGNfSW50ZXJhY3RpdmVfU2VsZWN0aW9uX1N0cmF0ZWd5X1BvcnRmb2xpby5odG1sLTI1OSJ9LCJleHAiOjE3NjUzNDAwNTMsImlhdCI6MTc2NTMzNjQ1MywiYWxnIjoiUlMyNTYifQ.V3Ivkeh7fjSU04uZkW_IETImNCDCsgCytEfn_KkZExhVCLC8qlJ-qY6tjzxbPVcTPsVBm8oujWZO-XaSgUrUPl-ngsyzCvb_1QWQjZoqfzp1Ay_5MTCQjV1DKEz52nZ-i7VSjhHlIq12OWOKApVdHEKuhXOnDahD07QCiy7ROl1t-MB7PhAq0pEO4rpP4t5kFvLC0OReb3hg20C6uEdprS3JrPQxdDFUk8s2shPJNOlHRHR0FPp51HSd-iqwfEC654rkLW6Ya117yheYhXIBylayVvVRL3sKnb_fF9USPOeRtwBF5QrlmwgE8k56lmA_98LIszfgLQHpF5fwYZitjg","c_2862481f237c250c_Interactive_Selection_Strategy_Portfolio.html-259")</script><script>'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){const d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);const c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{let a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){const b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{const c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){const c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{const c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){const c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);const e=yield c.blob();return new Promise((f,g)=>{const k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){let c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){const c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());let e;try{const f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){const b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");const c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;let c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){const c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{let g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){const g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){const b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{const e=d?(new URL(b,d||void 0)).toString():b;let f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){const [c,,e]=ia.exec(d)||[],f=c,g=e;if(!g)return"";if(g===b)return`src: ${f};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;const c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c;const e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){const d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){const d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){let d=a.cssText;const c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){let g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];const b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){const d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){const g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}const d=new Set;b(a);return d}function ua(a,b){return t(function*(){const d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){const d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){const c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){const {width:d,height:c}=A(a,b);var e=yield wa(a,b);e=yield B(e);const f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=
+16384));f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;const c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){const a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){let b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){const b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+</script><script>(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script>
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script>((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-2.5-flash-preview-09-2025","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-2.5-flash-image-preview","imageTransformModelName":"gemini-2.5-flash-image-preview","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"]})</script><script>(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Veritas Health Selection Strategy | Alexandra Sotero</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;family=Merriweather:ital,wght@0,300;0,700;1,300&amp;display=swap" rel="stylesheet">
+
+    <!-- Theme Configuration: Analytics Purple/Orange -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    },
+                    colors: {
+                        primary: '#6d28d9', // Violet 700 (Deep Purple for Analysis)
+                        secondary: '#f97316', // Orange 600 (Accent/Impact)
+                        background: '#fcfcfc', // Near White
+                        surface: '#ffffff',
+                        textMain: '#1e1b4b', // Indigo 900
+                        textMuted: '#6366f1', // Indigo 500
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #c7d2fe; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a5b4fc; }
+
+        /* Chart Container Styling */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px; 
+            height: 320px;    
+            margin: 0 auto;   
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px; 
+            }
+        }
+        
+        .fade-in { animation: fadeIn 0.5s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .nav-active {
+            border-bottom: 2px solid #6d28d9;
+            color: #6d28d9;
+            font-weight: 600;
+        }
+
+        /* I-O Icon Styling */
+        .io-icon {
+            font-family: 'Merriweather', serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Assessment Card Styles */
+        .assessment-card {
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .assessment-card:hover {
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+    </style>
+
+    <!-- Chosen Palette: Violet & Orange (Analytical) -->
+    <!-- Application Structure Plan: Tabbed Dashboard.
+         Sections: Overview, Competency Model (Interactive), Assessment Tools (NEW), Selection Funnel (Visual), Validation.
+         Rationale: Structured flow for complex information. Interactive model allows users to drill down into the I-O rationale behind each competency and experience mock tools.
+    -->
+    <!-- Visualization & Content Choices:
+         1. Competency Model: Clickable Cards with expanded detail via JS state change.
+         2. Assessment Tools: Interactive cards for CAT, SBI, SJT with mock questions/scenarios.
+         3. Selection Funnel: HTML/CSS Flowchart (Non-SVG) showing the 3 stages.
+         4. Turnover Projection: Chart.js Bar Chart showing projected retention improvement.
+         Confirmation: NO SVG, NO Mermaid. Canvas used for charts.
+    -->
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Inter, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.top-0{top:0px}.bottom-4{bottom:1rem}.left-0{left:0px}.left-\[7px\]{left:7px}.top-1\/2{top:50%}.top-4{top:1rem}.z-50{z-index:50}.z-0{z-index:0}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.my-2{margin-top:0.5rem;margin-bottom:0.5rem}.ml-1{margin-left:0.25rem}.mt-1{margin-top:0.25rem}.mt-8{margin-top:2rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mt-3{margin-top:0.75rem}.ml-2{margin-left:0.5rem}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-16{height:4rem}.h-8{height:2rem}.h-4{height:1rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-8{width:2rem}.w-full{width:100%}.w-0\.5{width:0.125rem}.w-4{width:1rem}.max-w-7xl{max-width:80rem}.flex-shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-start{justify-content:flex-start}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-x-auto{overflow-x:auto}.whitespace-nowrap{white-space:nowrap}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.rounded-r-lg{border-top-right-radius:0.5rem;border-bottom-right-radius:0.5rem}.border{border-width:1px}.border-2{border-width:2px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-b-2{border-bottom-width:2px}.border-l-4{border-left-width:4px}.border-t-4{border-top-width:4px}.border-indigo-100{--tw-border-opacity:1;border-color:rgb(224 231 255 / var(--tw-border-opacity, 1))}.border-indigo-200{--tw-border-opacity:1;border-color:rgb(199 210 254 / var(--tw-border-opacity, 1))}.border-primary{--tw-border-opacity:1;border-color:rgb(109 40 217 / var(--tw-border-opacity, 1))}.border-secondary{--tw-border-opacity:1;border-color:rgb(249 115 22 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.border-yellow-400{--tw-border-opacity:1;border-color:rgb(250 204 21 / var(--tw-border-opacity, 1))}.bg-background{--tw-bg-opacity:1;background-color:rgb(252 252 252 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-primary{--tw-bg-opacity:1;background-color:rgb(109 40 217 / var(--tw-bg-opacity, 1))}.bg-secondary{--tw-bg-opacity:1;background-color:rgb(249 115 22 / var(--tw-bg-opacity, 1))}.bg-surface{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-orange-50{--tw-bg-opacity:1;background-color:rgb(255 247 237 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-yellow-50{--tw-bg-opacity:1;background-color:rgb(254 252 232 / var(--tw-bg-opacity, 1))}.bg-indigo-300{--tw-bg-opacity:1;background-color:rgb(165 180 252 / var(--tw-bg-opacity, 1))}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.p-3{padding:0.75rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.pt-3{padding-top:0.75rem}.pl-0{padding-left:0px}.pl-10{padding-left:2.5rem}.text-center{text-align:center}.font-sans{font-family:Inter, sans-serif}.font-serif{font-family:Merriweather, serif}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.text-indigo-400{--tw-text-opacity:1;color:rgb(129 140 248 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(109 40 217 / var(--tw-text-opacity, 1))}.text-textMain{--tw-text-opacity:1;color:rgb(30 27 75 / var(--tw-text-opacity, 1))}.text-textMuted{--tw-text-opacity:1;color:rgb(99 102 241 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-secondary{--tw-text-opacity:1;color:rgb(249 115 22 / var(--tw-text-opacity, 1))}.text-yellow-800{--tw-text-opacity:1;color:rgb(133 77 14 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-80{opacity:0.8}.opacity-90{opacity:0.9}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-2{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-primary{--tw-ring-opacity:1;--tw-ring-color:rgb(109 40 217 / var(--tw-ring-opacity, 1))}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-200{transition-duration:200ms}.duration-300{transition-duration:300ms}.hover\:border-indigo-300:hover{--tw-border-opacity:1;border-color:rgb(165 180 252 / var(--tw-border-opacity, 1))}.hover\:bg-orange-700:hover{--tw-bg-opacity:1;background-color:rgb(194 65 12 / var(--tw-bg-opacity, 1))}.hover\:bg-indigo-50:hover{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.hover\:text-indigo-700:hover{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width: 768px){.md\:flex{display:flex}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:pl-10{padding-left:2.5rem}}@media (min-width: 1024px){.lg\:col-span-1{grid-column:span 1 / span 1}.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</style></head>
+<body class="bg-background text-textMain font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- Header / Branding -->
+    <header class="bg-surface shadow-md border-b border-indigo-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="h-8 w-8 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm io-icon">A</div>
+                <div>
+                    <h1 class="text-lg font-bold leading-none text-textMain">Alexandra Sotero <span class="text-xs font-normal text-indigo-400 ml-1">M.S. I-O Psychology (Cand.)</span></h1>
+                    <p class="text-xs text-primary font-medium">Talent Selection Strategy</p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <span class="text-xs px-3 py-1 bg-indigo-50 text-textMuted rounded-full">Project: Veritas Health</span>
+                <button onclick="downloadFile()" class="bg-secondary text-white text-sm font-medium px-3 py-1.5 rounded-lg shadow hover:bg-orange-700 transition-colors" title="Download this entire interactive report">
+                    ⬇️ Download HTML
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation (Tabs) -->
+    <nav class="bg-surface border-b border-indigo-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex space-x-8 overflow-x-auto" id="nav-container">
+                <button onclick="switchTab('overview')" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200 nav-active">
+                    Overview
+                </button>
+            
+                <button onclick="switchTab('competency')" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200 border-transparent text-textMuted hover:text-indigo-700 hover:border-indigo-300">
+                    Competency Model
+                </button>
+            
+                <button onclick="switchTab('tools')" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200 border-transparent text-textMuted hover:text-indigo-700 hover:border-indigo-300">
+                    Assessment Tools
+                </button>
+            
+                <button onclick="switchTab('funnel')" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200 border-transparent text-textMuted hover:text-indigo-700 hover:border-indigo-300">
+                    Selection Funnel
+                </button>
+            
+                <button onclick="switchTab('validation')" class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200 border-transparent text-textMuted hover:text-indigo-700 hover:border-indigo-300">
+                    Validation &amp; Impact
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div id="content-area" class="fade-in">
+                <div class="space-y-8">
+                    <!-- Hero Section -->
+                    <div class="bg-surface p-8 rounded-xl shadow-lg border-t-4 border-primary">
+                        <h2 class="text-2xl font-serif text-textMain mb-4">Competency Modeling and Selection Strategy: Care Manager Role</h2>
+                        <div class="flex flex-wrap gap-4 text-sm text-textMuted mb-6">
+                            <span class="bg-indigo-50 px-3 py-1 rounded-full">Analyst: Alexandra Sotero</span>
+                            <span class="bg-indigo-50 px-3 py-1 rounded-full">Client: Veritas Health (Fictional)</span>
+                        </div>
+                        <p class="text-lg text-textMuted leading-relaxed mb-6">
+                            Note: Quantum Care Group is a fictional entity created solely for this case study. The Care Group introduced the 'Prism Documentation Suite' to modernize case management. However, post-launch data revealed high error rates (12%) and low staff confidence, causing billing delays and employee stress.
+                        </p>
+                        <div class="p-4 bg-orange-50 border-l-4 border-secondary rounded-r-lg">
+                            <p class="text-secondary font-medium">Core Problem:</p>
+                            <p class="text-textMuted mt-1">The Care Manager role at Veritas Health experiences costly annual turnover exceeding 40% in the first year. The existing hiring process relies on unstructured interviews, lacking the predictive validity needed to ensure person-job fit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Turnover Chart and Objectives -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="lg:col-span-2 bg-surface p-6 rounded-xl shadow-md border border-indigo-100">
+                            <h3 class="text-xl font-semibold text-textMain mb-4">Projected Turnover Reduction: 15% Improvement</h3>
+                            <div class="chart-container">
+                                <canvas id="chart-turnover" width="1300" height="760" style="display: block; box-sizing: border-box; height: 380px; width: 650px;"></canvas>
+                            </div>
+                            <p class="text-sm text-textMuted mt-4">Baseline turnover was 40% per year; the new system is projected to drop turnover to 25%, demonstrating significant cost savings and organizational stability.</p>
+                        </div>
+
+                        <div class="lg:col-span-1 space-y-4">
+                            
+                                <div class="bg-primary p-5 rounded-xl text-white shadow-md">
+                                    <p class="text-xs font-semibold uppercase opacity-80">Objective: 12-Month Retention Rate</p>
+                                    <h4 class="text-3xl font-bold mt-1">75%</h4>
+                                    <p class="text-sm mt-2 opacity-90">Baseline: 60% | Target: 75%</p>
+                                </div>
+                            
+                                <div class="bg-primary p-5 rounded-xl text-white shadow-md">
+                                    <p class="text-xs font-semibold uppercase opacity-80">Objective: Recruitment/Training Cost</p>
+                                    <h4 class="text-3xl font-bold mt-1">Improved</h4>
+                                    <p class="text-sm mt-2 opacity-90">Baseline: High | Target: Reduced</p>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-50 border-t border-indigo-200 py-6 mt-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-textMuted text-sm">
+            <p>© 2025 Alexandra Sotero. Interactive Portfolio Component.</p>
+            <p class="text-xs mt-1">Fictional Case Study based on Selection &amp; Assessment principles.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // --- DATA STORE ---
+        const caseStudyData = {
+            meta: {
+                title: "Competency Modeling and Selection Strategy: Care Manager Role",
+                role: "Talent Management Analyst",
+                company: "Veritas Health (Fictional)"
+            },
+            overview: {
+                context: "Note: Quantum Care Group is a fictional entity created solely for this case study. The Care Group introduced the 'Prism Documentation Suite' to modernize case management. However, post-launch data revealed high error rates (12%) and low staff confidence, causing billing delays and employee stress.",
+                problem: "The Care Manager role at Veritas Health experiences costly annual turnover exceeding 40% in the first year. The existing hiring process relies on unstructured interviews, lacking the predictive validity needed to ensure person-job fit.",
+                goal: "To replace arbitrary hiring decisions with a **validated, competency-based selection system** to improve new-hire quality.",
+                objectives: [
+                    { label: "12-Month Retention Rate", baseline: "60%", target: "75%", actual: "75%" },
+                    { label: "Recruitment/Training Cost", baseline: "High", target: "Reduced", actual: "Improved" }
+                ],
+                currentTurnover: 40,
+                projectedTurnover: 25,
+                retentionImprovement: 15
+            },
+            competencies: [
+                {
+                    id: 1,
+                    name: "Situational Judgment",
+                    kasa: "Knowledge",
+                    definition: "The ability to assess complex care environments and make timely, ethical, and resource-appropriate decisions under stress.",
+                    tool: "Situational Judgment Test (SJT)",
+                    icon: "🧠"
+                },
+                {
+                    id: 2,
+                    name: "Emotional Regulation",
+                    kasa: "Ability",
+                    definition: "The capacity to maintain composure, de-escalate conflict, and manage personal stress while providing compassionate long-term care.",
+                    tool: "Structured Behavioral Interview",
+                    icon: "❤️"
+                },
+                {
+                    id: 3,
+                    name: "Proactive Planning",
+                    kasa: "Skill",
+                    definition: "The ability to anticipate client needs, manage multiple case deadlines, and coordinate complex inter-organizational logistics efficiently.",
+                    tool: "Work Sample/In-Basket Exercise",
+                    icon: "📋"
+                },
+                {
+                    id: 4,
+                    name: "Organizational Conscientiousness",
+                    kasa: "KSA",
+                    definition: "Adherence to stringent compliance standards (HIPAA, state mandates) and meticulous, accurate record-keeping (documentation).",
+                    tool: "Cognitive Ability Test (CAT)",
+                    icon: "✅"
+                }
+            ],
+            funnel: [
+                { stage: 1, title: "Screening & Ability", tool: "Cognitive Ability Test (CAT)", focus: "Measures aptitude for complex rule learning and high predictive validity.", icon: "🔬" },
+                { stage: 2, title: "Behavioral Assessment", tool: "Structured Interview (SBI)", focus: "Measures past behavior (e.g., conflict resolution) using standardized BARS to reduce rater bias.", icon: "🗣️" },
+                { stage: 3, title: "High-Fidelity Simulation", tool: "Situational Judgment Test (SJT)", focus: "Measures decision-making alignment with organizational values in realistic scenarios.", icon: "⚖️" }
+            ],
+            validation: {
+                strategy: "Predictive Validation Study: We will collect new hire assessment scores, and 12 months post-hire, run a multiple regression analysis against performance data (supervisor ratings, compliance scores, and turnover) to confirm which assessment tools are the strongest predictors.",
+                impact: [
+                    "Reduction in recruiting and training costs (driven by better retention).",
+                    "Improved organizational climate due to higher quality co-workers.",
+                    "Increased client satisfaction from more skilled and consistent care managers."
+                ]
+            },
+            assessmentTools: {
+                theory: {
+                    name: "Bandura's Social Learning Theory",
+                    ioLink: "This theory supports the use of high-fidelity simulations (SJT) and behavioral questions (SBI), arguing that past behavior (self-efficacy and observational learning) is the best predictor of future performance in complex roles.",
+                    icon: "💡"
+                },
+                cat: {
+                    name: "Cognitive Ability Test (CAT)",
+                    focus: "Organizational Conscientiousness",
+                    question: "A new state regulation (38-A) is 45 pages long and outlines complex billing codes. To maximize compliance, what is the most effective approach to quickly learn and apply these rules?",
+                    options: [
+                        "A. Read it once, take notes, and begin billing immediately.",
+                        "B. Break the regulation into 5-page sections, summarize each section, and practice applying codes to mock scenarios.",
+                        "C. Wait for a colleague to interpret the rules before starting your work.",
+                    ],
+                    correct: "B",
+                    rationale: "Requires breaking down complexity, organizing information, and active application—key indicators of cognitive aptitude and conscientiousness."
+                },
+                sbi: {
+                    name: "Structured Behavioral Interview (SBI)",
+                    focus: "Emotional Regulation",
+                    question: "Tell me about a time you had a significant conflict with a difficult client or colleague. What specific actions did you take to manage your own frustration and de-escalate the situation, and what was the resolution?",
+                    prompt: "(Requires a STAR-method response. Assessed against a Behaviorally Anchored Rating Scale (BARS) focused on sustained composure and communication skills.)"
+                },
+                sjt: {
+                    name: "Situational Judgment Test (SJT)",
+                    focus: "Situational Judgment",
+                    scenario: "You are coordinating care for a client who is non-compliant with medication and is verbally escalating toward their caretaker. You are currently 30 minutes away and due to start a critical intake meeting.",
+                    actions: [
+                        "A. Immediately call local law enforcement for a wellness check.",
+                        "B. Contact the caretaker to coach them on de-escalation techniques, while simultaneously notifying your supervisor of the critical status change.",
+                        "C. Finish your intake meeting since you are 30 minutes away and handle the situation afterward."
+                    ],
+                    best: "B",
+                    worst: "C",
+                    rationale: "The best action balances resource utilization (supervisor notification) with crisis support (coaching the caretaker), demonstrating strong clinical judgment and resource allocation under pressure."
+                }
+            }
+        };
+
+        // --- STATE MANAGEMENT ---
+        let currentTab = 'overview';
+        let activeCompetencyId = null; 
+        let activeTool = 'cat'; // Tracks which assessment tool is displayed
+
+        // --- DOM ELEMENTS ---
+        const navContainer = document.getElementById('nav-container');
+        const contentArea = document.getElementById('content-area');
+
+        // --- INITIALIZATION ---
+        function init() {
+            renderNav();
+            renderContent(currentTab);
+        }
+
+        // --- NAVIGATION LOGIC ---
+        function renderNav() {
+            const tabs = [
+                { id: 'overview', label: 'Overview' },
+                { id: 'competency', label: 'Competency Model' },
+                { id: 'tools', label: 'Assessment Tools' }, // NEW TAB
+                { id: 'funnel', label: 'Selection Funnel' },
+                { id: 'validation', label: 'Validation & Impact' }
+            ];
+
+            navContainer.innerHTML = tabs.map(tab => `
+                <button 
+                    onclick="switchTab('${tab.id}')"
+                    class="whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors duration-200 ${currentTab === tab.id ? 'nav-active' : 'border-transparent text-textMuted hover:text-indigo-700 hover:border-indigo-300'}"
+                >
+                    ${tab.label}
+                </button>
+            `).join('');
+        }
+
+        window.switchTab = function(tabId) {
+            currentTab = tabId;
+            renderNav();
+            contentArea.classList.remove('fade-in'); 
+            void contentArea.offsetWidth; 
+            contentArea.classList.add('fade-in');
+
+            contentArea.innerHTML = '';
+            activeCompetencyId = null; 
+
+            setTimeout(() => {
+                renderContent(tabId);
+            }, 50);
+        };
+
+        window.toggleCompetency = function(id) {
+            activeCompetencyId = activeCompetencyId === id ? null : id;
+            renderCompetencyModel();
+        };
+        
+        window.setActiveTool = function(toolName) {
+            activeTool = toolName;
+            renderAssessmentTools();
+        };
+
+        // --- CONTENT RENDERING ---
+        function renderContent(tabId) {
+            switch(tabId) {
+                case 'overview':
+                    renderOverview();
+                    break;
+                case 'competency':
+                    renderCompetencyModel();
+                    break;
+                case 'tools': // NEW CASE
+                    renderAssessmentTools();
+                    break;
+                case 'funnel':
+                    renderFunnel();
+                    break;
+                case 'validation':
+                    renderValidation();
+                    break;
+            }
+        }
+
+        // --- SECTION RENDERERS ---
+
+        function renderOverview() {
+            // FIX: Ensure context is defined or fallback is used gracefully
+            const contextText = caseStudyData.overview.context || "Fictional case study context is unavailable.";
+
+            const html = `
+                <div class="space-y-8">
+                    <!-- Hero Section -->
+                    <div class="bg-surface p-8 rounded-xl shadow-lg border-t-4 border-primary">
+                        <h2 class="text-2xl font-serif text-textMain mb-4">${caseStudyData.meta.title}</h2>
+                        <div class="flex flex-wrap gap-4 text-sm text-textMuted mb-6">
+                            <span class="bg-indigo-50 px-3 py-1 rounded-full">Analyst: Alexandra Sotero</span>
+                            <span class="bg-indigo-50 px-3 py-1 rounded-full">Client: ${caseStudyData.meta.company}</span>
+                        </div>
+                        <p class="text-lg text-textMuted leading-relaxed mb-6">
+                            ${contextText}
+                        </p>
+                        <div class="p-4 bg-orange-50 border-l-4 border-secondary rounded-r-lg">
+                            <p class="text-secondary font-medium">Core Problem:</p>
+                            <p class="text-textMuted mt-1">${caseStudyData.overview.problem}</p>
+                        </div>
+                    </div>
+
+                    <!-- Turnover Chart and Objectives -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <div class="lg:col-span-2 bg-surface p-6 rounded-xl shadow-md border border-indigo-100">
+                            <h3 class="text-xl font-semibold text-textMain mb-4">Projected Turnover Reduction: 15% Improvement</h3>
+                            <div class="chart-container">
+                                <canvas id="chart-turnover"></canvas>
+                            </div>
+                            <p class="text-sm text-textMuted mt-4">Baseline turnover was 40% per year; the new system is projected to drop turnover to 25%, demonstrating significant cost savings and organizational stability.</p>
+                        </div>
+
+                        <div class="lg:col-span-1 space-y-4">
+                            ${caseStudyData.overview.objectives.map(obj => `
+                                <div class="bg-primary p-5 rounded-xl text-white shadow-md">
+                                    <p class="text-xs font-semibold uppercase opacity-80">Objective: ${obj.label}</p>
+                                    <h4 class="text-3xl font-bold mt-1">${obj.actual}</h4>
+                                    <p class="text-sm mt-2 opacity-90">Baseline: ${obj.baseline} | Target: ${obj.target}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+            contentArea.innerHTML = html;
+            setTimeout(initCharts, 0);
+        }
+
+        function renderCompetencyModel() {
+            const modelHtml = caseStudyData.competencies.map(comp => {
+                const isActive = comp.id === activeCompetencyId;
+                return `
+                    <div class="bg-surface p-6 rounded-xl shadow-md border-2 cursor-pointer transition-all duration-300 ${isActive ? 'border-primary shadow-xl ring-2 ring-primary bg-indigo-50' : 'border-indigo-100 hover:border-indigo-300'}" 
+                         onclick="toggleCompetency(${comp.id})">
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-textMain">${comp.name}</h3>
+                            <span class="io-icon text-3xl text-secondary">${comp.icon}</span>
+                        </div>
+                        <p class="text-sm text-textMuted mt-1 mb-3"><b>KSA Type:</b> ${comp.kasa}</p>
+                        
+                        ${isActive ? `
+                            <div class="mt-4 pt-3 border-t border-indigo-200">
+                                <p class="text-sm font-semibold text-textMain">Definition:</p>
+                                <p class="text-textMuted text-sm">${comp.definition}</p>
+                                <p class="text-sm font-semibold text-textMain mt-3">Selection Tool:</p>
+                                <span class="inline-block bg-primary text-white text-xs px-3 py-1 rounded-full">${comp.tool}</span>
+                            </div>
+                        ` : `
+                            <p class="text-sm text-primary font-medium mt-3">Click to view I-O Rationale...</p>
+                        `}
+                    </div>
+                `;
+            }).join('');
+
+            const introHtml = `
+                <div class="mb-6 bg-surface p-6 rounded-xl shadow-sm border border-indigo-100">
+                    <h2 class="text-2xl font-serif text-textMain mb-2">Job Analysis & Competency Modeling</h2>
+                    <p class="text-textMuted">This is the foundation of the selection strategy. We used the **Critical Incident Technique (CIT)** to define the behaviors required for top performers, resulting in the four core competencies below. Click any card to view the I-O rationale.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    ${modelHtml}
+                </div>
+            `;
+            contentArea.innerHTML = introHtml;
+        }
+
+        function renderAssessmentTools() {
+            const data = caseStudyData.assessmentTools;
+            let currentContent;
+            let title;
+            let icon;
+            let competencyIndex; // Index in the zero-based array
+
+            if (activeTool === 'cat') {
+                competencyIndex = 3; // Organizational Conscientiousness is the 4th item (index 3)
+                currentContent = `
+                    <p class="text-lg font-semibold text-textMain mb-3">${data.cat.question}</p>
+                    ${data.cat.options.map((opt, i) => `
+                        <div class="flex items-center space-x-3 p-3 my-2 rounded-lg ${opt.startsWith('B') ? 'bg-green-50' : 'bg-gray-50'}">
+                            <span class="font-bold">${opt.substring(0, 1)}:</span>
+                            <p class="text-sm">${opt.substring(2).trim()}</p>
+                        </div>
+                    `).join('')}
+                    <div class="mt-4 p-3 bg-indigo-100 rounded-lg">
+                        <p class="font-semibold text-primary">I-O Rationale:</p>
+                        <p class="text-sm">${data.cat.rationale}</p>
+                    </div>
+                `;
+                title = data.cat.name;
+                // FIX: Accessing competency icons using the defined index
+                icon = caseStudyData.competencies[competencyIndex].icon; 
+            } else if (activeTool === 'sbi') {
+                competencyIndex = 1; // Emotional Regulation is the 2nd item (index 1)
+                currentContent = `
+                    <p class="text-lg font-semibold text-textMain mb-3">${data.sbi.question}</p>
+                    <div class="p-3 bg-yellow-50 border-l-4 border-yellow-400 rounded-lg">
+                        <p class="font-semibold text-yellow-800">Assessed Prompt:</p>
+                        <p class="text-sm mt-1">${data.sbi.prompt}</p>
+                    </div>
+                `;
+                title = data.sbi.name;
+                // FIX: Accessing competency icons using the defined index
+                icon = caseStudyData.competencies[competencyIndex].icon; 
+            } else if (activeTool === 'sjt') {
+                competencyIndex = 0; // Situational Judgment is the 1st item (index 0)
+                currentContent = `
+                    <div class="mb-3 p-3 bg-orange-50 border-l-4 border-secondary rounded-lg">
+                        <p class="font-semibold text-secondary">Scenario:</p>
+                        <p class="text-sm mt-1">${data.sjt.scenario}</p>
+                    </div>
+                    <p class="text-lg font-semibold text-textMain mb-3">Which action is the MOST effective?</p>
+                    ${data.sjt.actions.map((action, i) => `
+                        <div class="flex items-center space-x-3 p-3 my-2 rounded-lg ${action.startsWith('B') ? 'bg-green-50' : 'bg-gray-50'}">
+                            <span class="font-bold">${action.substring(0, 1)}:</span>
+                            <p class="text-sm">${action.substring(2).trim()}</p>
+                        </div>
+                    `).join('')}
+                    <div class="mt-4 p-3 bg-indigo-100 rounded-lg">
+                        <p class="font-semibold text-primary">I-O Rationale:</p>
+                        <p class="text-sm">${data.sjt.rationale}</p>
+                    </div>
+                `;
+                title = data.sjt.name;
+                // FIX: Accessing competency icons using the defined index
+                icon = caseStudyData.competencies[competencyIndex].icon; 
+            }
+
+            // Fallback icon definition in case of further data structure issues
+            const iconToDisplay = icon || '🛠️';
+
+            const html = `
+                <div class="space-y-8">
+                    <!-- Theory Card -->
+                    <div class="bg-surface p-6 rounded-xl shadow-md border-t-4 border-secondary flex items-start space-x-4">
+                        <span class="io-icon text-3xl text-secondary flex-shrink-0 mt-1">${data.theory.icon}</span>
+                        <div>
+                            <h2 class="text-2xl font-serif text-textMain mb-2">Theoretical Anchor: ${data.theory.name}</h2>
+                            <p class="text-textMuted">${data.theory.ioLink}</p>
+                        </div>
+                    </div>
+
+                    <!-- Tool Navigation -->
+                    <div class="bg-surface p-4 rounded-xl shadow-md flex justify-around border border-indigo-100">
+                        <button onclick="setActiveTool('cat')" class="px-4 py-2 text-sm font-semibold rounded-lg transition-colors ${activeTool === 'cat' ? 'bg-primary text-white' : 'text-textMuted hover:bg-indigo-50'}">
+                            1. CAT (Rules & Conscientiousness)
+                        </button>
+                        <button onclick="setActiveTool('sbi')" class="px-4 py-2 text-sm font-semibold rounded-lg transition-colors ${activeTool === 'sbi' ? 'bg-primary text-white' : 'text-textMuted hover:bg-indigo-50'}">
+                            2. SBI (Emotional Regulation)
+                        </button>
+                        <button onclick="setActiveTool('sjt')" class="px-4 py-2 text-sm font-semibold rounded-lg transition-colors ${activeTool === 'sjt' ? 'bg-primary text-white' : 'text-textMuted hover:bg-indigo-50'}">
+                            3. SJT (Situational Judgment)
+                        </button>
+                    </div>
+
+                    <!-- Active Tool Content -->
+                    <div class="bg-surface p-8 assessment-card border border-indigo-200">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <!-- Corrected icon access -->
+                            <span class="io-icon text-3xl text-primary">${iconToDisplay}</span>
+                            <h3 class="text-2xl font-bold text-textMain">${title}</h3>
+                        </div>
+                        ${currentContent}
+                    </div>
+                </div>
+            `;
+            contentArea.innerHTML = html;
+        }
+
+
+        function renderFunnel() {
+            const funnelHtml = caseStudyData.funnel.map((step, index) => `
+                <div class="relative flex items-center justify-start w-full">
+                    <div class="absolute left-0 top-1/2 transform -translate-y-1/2 w-4 h-4 rounded-full bg-primary z-10"></div>
+                    
+                    <div class="bg-surface p-5 pl-10 rounded-xl shadow-md w-full border border-indigo-100 transition-shadow duration-300 hover:shadow-xl">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-bold text-textMain">${step.title} <span class="text-sm text-secondary ml-2">${step.icon}</span></h3>
+                            <span class="text-sm font-medium bg-primary text-white px-3 py-1 rounded-full">Step ${step.stage}</span>
+                        </div>
+                        <p class="text-secondary font-semibold mt-2">${step.tool}</p>
+                        <p class="text-textMuted text-sm mt-1">${step.focus}</p>
+                    </div>
+
+                    ${index < caseStudyData.funnel.length - 1 ? `
+                        <div class="absolute left-[7px] h-full w-0.5 bg-indigo-300 z-0 top-4 bottom-4"></div>
+                    ` : ''}
+                </div>
+            `).join('');
+
+            const html = `
+                <div class="space-y-6">
+                    <div class="mb-6 bg-surface p-6 rounded-xl shadow-sm border border-indigo-100">
+                        <h2 class="text-2xl font-serif text-textMain mb-2">Selection Funnel: Increasing Predictive Validity</h2>
+                        <p class="text-textMuted">The system is designed as a three-stage sequential hurdle model. Candidates are filtered based on validity and cost, ensuring that high-cost simulations (SJT) are only used on candidates who have already demonstrated basic aptitude (CAT).</p>
+                    </div>
+                    
+                    <div class="relative space-y-8 pl-0 md:pl-10">
+                        ${funnelHtml}
+                    </div>
+                </div>
+            `;
+            contentArea.innerHTML = html;
+        }
+
+        function renderValidation() {
+            const html = `
+                <div class="space-y-8">
+                    <div class="bg-surface p-8 rounded-xl shadow-lg border-t-4 border-primary">
+                        <h2 class="text-2xl font-serif text-textMain mb-4">Validation Strategy & Organizational Impact</h2>
+                        <h3 class="text-xl font-semibold text-secondary mb-3">Predictive Validation (The I-O Test)</h3>
+                        <div class="p-4 bg-indigo-50 border-l-4 border-primary rounded-r-lg">
+                            <p class="text-textMain font-medium leading-relaxed">${caseStudyData.validation.strategy}</p>
+                        </div>
+
+                        <h3 class="text-xl font-semibold text-secondary mt-8 mb-4">Expected Organizational Impact</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            ${caseStudyData.validation.impact.map((point, index) => `
+                                <div class="bg-surface p-4 rounded-lg shadow-sm border border-indigo-100 flex items-start space-x-3">
+                                    <span class="text-secondary mt-1 text-xl">⭐</span>
+                                    <p class="text-textMuted text-sm">${point}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+            contentArea.innerHTML = html;
+        }
+
+        // --- CHART LOGIC ---
+        let turnoverChart = null;
+
+        function initCharts() {
+            if (turnoverChart) turnoverChart.destroy();
+
+            const ctx = document.getElementById('chart-turnover');
+            if (ctx) {
+                turnoverChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Baseline Turnover (Current)', 'Projected Turnover (New System)'],
+                        datasets: [{
+                            label: 'Turnover Rate (%)',
+                            data: [caseStudyData.overview.currentTurnover, caseStudyData.overview.projectedTurnover],
+                            backgroundColor: ['#c4b5fd', '#6d28d9'], // Light Purple, Dark Purple
+                            borderRadius: 8,
+                            barThickness: 50 
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    title: (context) => context[0].label,
+                                    label: (context) => `Rate: ${context.parsed.y}%`
+                                }
+                            },
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 50,
+                                title: { display: true, text: 'Percentage (%)' },
+                                grid: { color: '#e0e7ff' }
+                            },
+                            x: { grid: { display: false } }
+                        }
+                    }
+                });
+            }
+        }
+
+        // --- DOWNLOAD LOGIC ---
+        function downloadFile() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Alexandra_IO_Portfolio_Selection_Strategy.html';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        // Initialize the app
+        init();
+    </script>
+
+</body></html>
